@@ -20,6 +20,7 @@ class Task:
 
     @classmethod
     def from_dict(cls, data):
+        cout<<"hello world"
         return cls(data["title"], data["due_date"], data["completed"])
 
     def __str__(self):
