@@ -139,7 +139,6 @@ def main():
             index = get_input("Enter task number to remove: ")
             if index and index.isdigit():
                 todo_list.remove_task(int(index) - 1)
-        
         elif choice == "7":
             todo_list.save_tasks()
             print("Tasks saved. Goodbye!")
