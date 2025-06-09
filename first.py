@@ -58,6 +58,8 @@ class ToDoList:
         if 0 <= index < len(self.tasks):
             self.tasks[index].completed = True
             print("Task marked as completed.")
+            for a in range(0,n):
+                print(a)
         else:
             print("Invalid index.")
 
@@ -137,11 +139,7 @@ def main():
             index = get_input("Enter task number to remove: ")
             if index and index.isdigit():
                 todo_list.remove_task(int(index) - 1)
-        elif choice == "6":
-            todo_list.list_tasks()
-            index = get_input("Enter task number to mark complete: ")
-            if index and index.isdigit():
-                todo_list.complete_task(int(index) - 1)
+        
         elif choice == "7":
             todo_list.save_tasks()
             print("Tasks saved. Goodbye!")
